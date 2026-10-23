@@ -1,0 +1,255 @@
+# Top 200+ Coding Questions for MNC Interviews
+
+A curated list of frequently asked Data Structures and Algorithms (DSA) and logic-building questions in top MNCs (TCS, Infosys, Wipro, Cognizant, Accenture, IBM, etc.). 
+
+**Instructions:**
+- Use this as a checklist: Check off the boxes `- [x]` as you complete them.
+- Focus on recognizing the patterns rather than just memorizing the code.
+- Always try to solve the problem on a piece of paper or whiteboard first before jumping into code.
+
+---
+
+## 1. Arrays & Hashing
+- [ ] 1. Two Sum
+- [ ] 2. Best Time to Buy and Sell Stock
+- [ ] 3. Contains Duplicate
+- [ ] 4. Product of Array Except Self
+- [ ] 5. Maximum Subarray
+- [ ] 6. Maximum Product Subarray
+- [ ] 7. Find Minimum in Rotated Sorted Array
+- [ ] 8. Search in Rotated Sorted Array
+- [ ] 9. 3Sum
+- [ ] 10. Container With Most Water
+- [ ] 11. Move Zeroes
+- [ ] 12. Remove Duplicates from Sorted Array
+- [ ] 13. Merge Sorted Array
+- [ ] 14. Sort Colors (Dutch National Flag)
+- [ ] 15. Find Peak Element
+- [ ] 16. Majority Element
+- [ ] 17. Rotate Array
+- [ ] 18. Missing Number
+- [ ] 19. Find All Numbers Disappeared in an Array
+- [ ] 20. Single Number
+- [ ] 21. Intersection of Two Arrays
+- [ ] 22. Intersection of Two Arrays II
+- [ ] 23. Next Permutation
+- [ ] 24. Pascal's Triangle
+- [ ] 25. Pascal's Triangle II
+- [ ] 26. Set Matrix Zeroes
+- [ ] 27. Spiral Matrix
+- [ ] 28. Rotate Image
+- [ ] 29. First Missing Positive
+- [ ] 30. Longest Consecutive Sequence
+- [ ] 31. Kth Largest Element in an Array
+- [ ] 32. Subarray Sum Equals K
+- [ ] 33. Find the Duplicate Number
+- [ ] 34. Trapping Rain Water
+- [ ] 35. Sliding Window Maximum
+
+## 2. Strings
+- [ ] 36. Valid Palindrome
+- [ ] 37. Longest Substring Without Repeating Characters
+- [ ] 38. Longest Repeating Character Replacement
+- [ ] 39. Valid Parentheses
+- [ ] 40. Longest Palindromic Substring
+- [ ] 41. Palindromic Substrings
+- [ ] 42. Encode and Decode Strings
+- [ ] 43. Group Anagrams
+- [ ] 44. Find All Anagrams in a String
+- [ ] 45. Minimum Window Substring
+- [ ] 46. Reverse String
+- [ ] 47. Reverse Vowels of a String
+- [ ] 48. Reverse Words in a String
+- [ ] 49. String to Integer (atoi)
+- [ ] 50. Implement strStr()
+- [ ] 51. Longest Common Prefix
+- [ ] 52. Valid Anagram
+- [ ] 53. Isomorphic Strings
+- [ ] 54. Word Pattern
+- [ ] 55. Check If Two String Arrays are Equivalent
+- [ ] 56. Count and Say
+- [ ] 57. Multiply Strings
+- [ ] 58. Add Strings
+- [ ] 59. Add Binary
+- [ ] 60. Roman to Integer
+- [ ] 61. Integer to Roman
+- [ ] 62. Minimum Add to Make Parentheses Valid
+- [ ] 63. Generate Parentheses
+- [ ] 64. Decode String
+- [ ] 65. Longest Valid Parentheses
+- [ ] 66. Edit Distance
+- [ ] 67. Regular Expression Matching
+- [ ] 68. Wildcard Matching
+- [ ] 69. Distinct Subsequences
+- [ ] 70. Find the Index of the First Occurrence in a String
+
+## 3. Linked Lists
+- [ ] 71. Reverse Linked List
+- [ ] 72. Merge Two Sorted Lists
+- [ ] 73. Reorder List
+- [ ] 74. Remove Nth Node From End of List
+- [ ] 75. Copy List with Random Pointer
+- [ ] 76. Add Two Numbers
+- [ ] 77. Linked List Cycle
+- [ ] 78. Linked List Cycle II
+- [ ] 79. Find the Duplicate Number (LL variation)
+- [ ] 80. Merge k Sorted Lists
+- [ ] 81. Reverse Nodes in k-Group
+- [ ] 82. Palindrome Linked List
+- [ ] 83. Intersection of Two Linked Lists
+- [ ] 84. Middle of the Linked List
+- [ ] 85. Delete Node in a Linked List
+- [ ] 86. Remove Linked List Elements
+- [ ] 87. Odd Even Linked List
+- [ ] 88. Sort List
+- [ ] 89. Partition List
+- [ ] 90. Rotate List
+- [ ] 91. Swap Nodes in Pairs
+- [ ] 92. Reverse Linked List II
+- [ ] 93. Flatten a Multilevel Doubly Linked List
+- [ ] 94. LRU Cache
+- [ ] 95. LFU Cache
+
+## 4. Stacks & Queues
+- [ ] 96. Implement Queue using Stacks
+- [ ] 97. Implement Stack using Queues
+- [ ] 98. Min Stack
+- [ ] 99. Evaluate Reverse Polish Notation
+- [ ] 100. Daily Temperatures
+- [ ] 101. Next Greater Element I
+- [ ] 102. Next Greater Element II
+- [ ] 103. Largest Rectangle in Histogram
+- [ ] 104. Maximal Rectangle
+- [ ] 105. Sliding Window Maximum
+- [ ] 106. Stock Spanner
+- [ ] 107. Online Stock Span
+- [ ] 108. Remove K Digits
+- [ ] 109. 132 Pattern
+- [ ] 110. Design Circular Queue
+
+## 5. Trees & Tries
+- [ ] 111. Maximum Depth of Binary Tree
+- [ ] 112. Same Tree
+- [ ] 113. Invert Binary Tree
+- [ ] 114. Binary Tree Maximum Path Sum
+- [ ] 115. Binary Tree Level Order Traversal
+- [ ] 116. Serialize and Deserialize Binary Tree
+- [ ] 117. Subtree of Another Tree
+- [ ] 118. Construct Binary Tree from Preorder and Inorder Traversal
+- [ ] 119. Validate Binary Search Tree
+- [ ] 120. Kth Smallest Element in a BST
+- [ ] 121. Lowest Common Ancestor of a BST
+- [ ] 122. Lowest Common Ancestor of a Binary Tree
+- [ ] 123. Implement Trie (Prefix Tree)
+- [ ] 124. Design Add and Search Words Data Structure
+- [ ] 125. Word Search II
+- [ ] 126. Binary Tree Right Side View
+- [ ] 127. Binary Tree Zigzag Level Order Traversal
+- [ ] 128. Balanced Binary Tree
+- [ ] 129. Minimum Depth of Binary Tree
+- [ ] 130. Path Sum
+- [ ] 131. Path Sum II
+- [ ] 132. Path Sum III
+- [ ] 133. Diameter of Binary Tree
+- [ ] 134. Merge Two Binary Trees
+- [ ] 135. Symmetric Tree
+- [ ] 136. Convert Sorted Array to Binary Search Tree
+- [ ] 137. Flatten Binary Tree to Linked List
+- [ ] 138. Populating Next Right Pointers in Each Node
+- [ ] 139. Binary Search Tree Iterator
+- [ ] 140. Insert into a Binary Search Tree
+- [ ] 141. Delete Node in a BST
+- [ ] 142. All Nodes Distance K in Binary Tree
+- [ ] 143. Binary Tree Maximum Path Sum
+- [ ] 144. Count Complete Tree Nodes
+- [ ] 145. Serialize and Deserialize BST
+
+## 6. Graphs
+- [ ] 146. Number of Islands
+- [ ] 147. Clone Graph
+- [ ] 148. Max Area of Island
+- [ ] 149. Pacific Atlantic Water Flow
+- [ ] 150. Surrounded Regions
+- [ ] 151. Rotting Oranges
+- [ ] 152. Walls and Gates
+- [ ] 153. Course Schedule
+- [ ] 154. Course Schedule II
+- [ ] 155. Redundant Connection
+- [ ] 156. Number of Connected Components in an Undirected Graph
+- [ ] 157. Graph Valid Tree
+- [ ] 158. Word Ladder
+- [ ] 159. Minimum Height Trees
+- [ ] 160. Is Graph Bipartite?
+- [ ] 161. Network Delay Time
+- [ ] 162. Cheapest Flights Within K Stops
+- [ ] 163. Evaluate Division
+- [ ] 164. Find Eventual Safe States
+- [ ] 165. Alien Dictionary
+- [ ] 166. Reconstruct Itinerary
+- [ ] 167. Min Cost to Connect All Points
+- [ ] 168. Swim in Rising Water
+- [ ] 169. Number of Provinces
+- [ ] 170. Word Search
+
+## 7. Dynamic Programming
+- [ ] 171. Climbing Stairs
+- [ ] 172. Min Cost Climbing Stairs
+- [ ] 173. House Robber
+- [ ] 174. House Robber II
+- [ ] 175. Decode Ways
+- [ ] 176. Coin Change
+- [ ] 177. Maximum Product Subarray
+- [ ] 178. Word Break
+- [ ] 179. Longest Increasing Subsequence
+- [ ] 180. Partition Equal Subset Sum
+- [ ] 181. Unique Paths
+- [ ] 182. Unique Paths II
+- [ ] 183. Minimum Path Sum
+- [ ] 184. Edit Distance
+- [ ] 185. Burst Balloons
+- [ ] 186. Longest Common Subsequence
+- [ ] 187. Target Sum
+- [ ] 188. Interleaving String
+- [ ] 189. Maximum Alternating Subsequence Sum
+- [ ] 190. Distinct Subsequences
+- [ ] 191. Best Time to Buy and Sell Stock with Cooldown
+- [ ] 192. Best Time to Buy and Sell Stock IV
+
+## 8. Sorting, Searching & Binary Search
+- [ ] 193. Binary Search
+- [ ] 194. Search Insert Position
+- [ ] 195. Find First and Last Position of Element in Sorted Array
+- [ ] 196. Search a 2D Matrix
+- [ ] 197. Search a 2D Matrix II
+- [ ] 198. Find Minimum in Rotated Sorted Array II
+- [ ] 199. Koko Eating Bananas
+- [ ] 200. Minimum Number of Days to Make m Bouquets
+- [ ] 201. Split Array Largest Sum
+- [ ] 202. Median of Two Sorted Arrays
+- [ ] 203. Find K-th Smallest Pair Distance
+- [ ] 204. Sort an Array
+- [ ] 205. Top K Frequent Elements
+- [ ] 206. Sort Characters By Frequency
+- [ ] 207. Merge Intervals
+- [ ] 208. Insert Interval
+- [ ] 209. Non-overlapping Intervals
+- [ ] 210. Meeting Rooms
+- [ ] 211. Meeting Rooms II
+
+## 9. Greedy & Bit Manipulation
+- [ ] 212. Jump Game
+- [ ] 213. Jump Game II
+- [ ] 214. Gas Station
+- [ ] 215. Hand of Straights
+- [ ] 216. Minimum Number of Arrows to Burst Balloons
+- [ ] 217. Single Number II
+- [ ] 218. Single Number III
+- [ ] 219. Number of 1 Bits
+- [ ] 220. Counting Bits
+- [ ] 221. Reverse Bits
+- [ ] 222. Missing Number
+- [ ] 223. Sum of Two Integers
+- [ ] 224. Maximum XOR of Two Numbers in an Array
+- [ ] 225. Subsets
+- [ ] 226. Subsets II
+

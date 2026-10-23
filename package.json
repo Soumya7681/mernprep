@@ -1,0 +1,47 @@
+{
+  "name": "mernprep",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint"
+  },
+  "dependencies": {
+    "highlight.js": "^11.11.1",
+    "lucide-react": "^0.468.0",
+    "marked": "^18.0.3",
+    "next": "16.2.6",
+    "react": "19.2.4",
+    "react-dom": "19.2.4"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "16.2.6",
+    "tailwindcss": "^4",
+    "typescript": "^5"
+  },
+  "description": "An open-source MERN stack interview prep book: JavaScript, React, Node.js, Express, NestJS and MongoDB in depth, with coding and scenario-based questions.",
+  "author": "Soumyaranjan",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Soumya7681/mernprep.git"
+  },
+  "license": "MIT",
+  "keywords": [
+    "interview",
+    "mern",
+    "javascript",
+    "react",
+    "nodejs",
+    "express",
+    "nestjs",
+    "mongodb",
+    "typescript"
+  ]
+}

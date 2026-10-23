@@ -1,0 +1,4 @@
+# Cloudflare Pages / Netlify redirects for the static export.
+# The Redux Toolkit chapter moved from the React section into its own Redux section.
+/02-react/11-redux-toolkit/  /16-redux/02-redux-toolkit-typescript/  301
+/02-react/11-redux-toolkit   /16-redux/02-redux-toolkit-typescript/  301

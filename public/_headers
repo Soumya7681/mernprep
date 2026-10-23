@@ -1,0 +1,38 @@
+# Response headers for the static export.
+#
+# This file is read by Cloudflare Pages and Netlify, which is how a site built
+# with `output: "export"` gets response headers at all — Next cannot set them,
+# because there is no server. GitHub Pages ignores this file entirely and has no
+# equivalent, so security headers are not achievable on that host.
+#
+# Addresses the crawler findings: missing HSTS, X-Frame-Options,
+# Content-Security-Policy and Referrer-Policy.
+
+/*
+  # Only ever connect over HTTPS. Two years, subdomains included.
+  # Submit the domain to hstspreload.org separately if you want preload honoured.
+  Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
+
+  # Clickjacking. frame-ancestors below is the modern equivalent; this covers
+  # browsers that still only read the legacy header.
+  X-Frame-Options: SAMEORIGIN
+
+  # Stop the browser guessing a MIME type different to the one we send.
+  X-Content-Type-Options: nosniff
+
+  # Keep the referrer useful on-site, strip the path when leaving the origin.
+  Referrer-Policy: strict-origin-when-cross-origin
+
+  # No feature this site uses needs any of these.
+  Permissions-Policy: camera=(), microphone=(), geolocation=(), interest-cohort=()
+
+  # CSP. 'unsafe-inline' is required for scripts because the theme bootstrap in
+  # app/layout.tsx runs inline before hydration, and a static export cannot mint
+  # a per-request nonce. The remaining directives still block plugin content,
+  # base-tag injection and framing. The googlesyndication/doubleclick entries are
+  # what AdSense needs to load and render ads.
+  Content-Security-Policy: default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'self'; form-action 'self'; script-src 'self' 'unsafe-inline' https://pagead2.googlesyndication.com https://partner.googleadservices.com https://tpc.googlesyndication.com https://adservice.google.com https://www.googletagservices.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: https:; font-src 'self' data:; frame-src 'self' https://googleads.g.doubleclick.net https://tpc.googlesyndication.com https://www.google.com; connect-src 'self' https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://adservice.google.com; upgrade-insecure-requests
+
+# Hashed build assets never change under the same URL, so cache them hard.
+/_next/static/*
+  Cache-Control: public, max-age=31536000, immutable
