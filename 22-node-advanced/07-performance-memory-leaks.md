@@ -1,4 +1,4 @@
-# Chapter 63 — Performance & Memory Leaks
+# Chapter 67 — Performance & Memory Leaks
 
 ## 📖 Definition
 

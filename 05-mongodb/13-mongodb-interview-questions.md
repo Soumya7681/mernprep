@@ -1,4 +1,4 @@
-# Chapter 82 — MongoDB Interview Questions (Rapid-Fire)
+# Chapter 86 — MongoDB Interview Questions (Rapid-Fire)
 
 ## 📖 How to Use This Chapter
 

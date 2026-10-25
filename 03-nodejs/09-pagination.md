@@ -1,4 +1,4 @@
-# Chapter 55 — Pagination
+# Chapter 59 — Pagination
 
 ## 📖 Definition
 

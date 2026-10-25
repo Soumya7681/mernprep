@@ -1,4 +1,4 @@
-# Chapter 61 — Node Security (OWASP)
+# Chapter 65 — Node Security (OWASP)
 
 ## 📖 Definition
 

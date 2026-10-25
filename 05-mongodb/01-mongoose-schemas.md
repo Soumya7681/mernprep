@@ -1,4 +1,4 @@
-# Chapter 73 — Mongoose Schemas
+# Chapter 77 — Mongoose Schemas
 
 ## 📖 Definition
 

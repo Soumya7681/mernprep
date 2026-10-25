@@ -1,4 +1,4 @@
-# Chapter 48 — Promises & `async`/`await` in Node
+# Chapter 52 — Promises & `async`/`await` in Node
 
 ## 📖 Definition
 

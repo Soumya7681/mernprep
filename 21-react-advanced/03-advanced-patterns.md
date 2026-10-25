@@ -1,4 +1,4 @@
-# Chapter 36 — Advanced Component Patterns
+# Chapter 40 — Advanced Component Patterns
 
 ## 📖 Definition
 
@@ -241,4 +241,4 @@ function OrdersPage() {
 
 ---
 
-[← Concurrent Rendering & Suspense](02-concurrent-rendering-suspense.md) | [Index](../README.md) | [Next: Server State & Data Fetching →](04-server-state-data-fetching.md)
+[← SSR, Hydration & Rendering Strategies](08-ssr-hydration.md) | [Index](../README.md) | [Next: Server State & Data Fetching →](04-server-state-data-fetching.md)

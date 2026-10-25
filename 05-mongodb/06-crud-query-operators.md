@@ -1,4 +1,4 @@
-# Chapter 71 — CRUD & Query Operators
+# Chapter 75 — CRUD & Query Operators
 
 ## 📖 Definition
 

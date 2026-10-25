@@ -1,4 +1,4 @@
-# Chapter 116 — Caching
+# Chapter 124 — Caching
 
 ## 📖 Definition
 

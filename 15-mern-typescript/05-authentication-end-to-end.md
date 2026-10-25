@@ -1,4 +1,4 @@
-# Chapter 87 — Authentication End-to-End (Express + Mongo + React/Redux)
+# Chapter 91 — Authentication End-to-End (Express + Mongo + React/Redux)
 
 ## 📖 Definition
 

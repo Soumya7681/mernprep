@@ -1,4 +1,4 @@
-# Chapter 28 — `useRef`
+# Chapter 30 — `useRef`
 
 ## 📖 Definition
 

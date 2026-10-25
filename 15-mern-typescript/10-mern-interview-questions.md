@@ -1,4 +1,4 @@
-# Chapter 92 — MERN + TypeScript Interview Questions (Rapid-Fire)
+# Chapter 96 — MERN + TypeScript Interview Questions (Rapid-Fire)
 
 ## 📖 How to Use This Chapter
 
@@ -132,4 +132,4 @@ Replace the brackets with **your real numbers** — specifics are what interview
 
 ---
 
-[← Production & Deployment](09-production-deployment.md) | [Index](../README.md) | [Next: JS Predict-the-Output →](../23-coding-questions/01-js-output-questions.md)
+[← Production & Deployment](09-production-deployment.md) | [Index](../README.md) | [Next: Jest Fundamentals →](../25-testing-jest/01-jest-fundamentals.md)

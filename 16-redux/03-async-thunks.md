@@ -1,4 +1,4 @@
-# Chapter 43 — Async Logic with `createAsyncThunk`
+# Chapter 47 — Async Logic with `createAsyncThunk`
 
 ## 📖 Definition
 

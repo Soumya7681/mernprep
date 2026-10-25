@@ -1,4 +1,4 @@
-# Chapter 112 — Frontend Machine Coding Tasks
+# Chapter 120 — Frontend Machine Coding Tasks
 
 ## 📖 What Interviewers Are Testing
 

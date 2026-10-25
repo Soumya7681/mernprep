@@ -1,4 +1,4 @@
-# Chapter 56 — Rate Limiting
+# Chapter 60 — Rate Limiting
 
 ## 📖 Definition
 

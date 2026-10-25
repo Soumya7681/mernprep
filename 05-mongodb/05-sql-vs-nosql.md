@@ -1,4 +1,4 @@
-# Chapter 70 — SQL vs NoSQL
+# Chapter 74 — SQL vs NoSQL
 
 ## 📖 Definitions
 

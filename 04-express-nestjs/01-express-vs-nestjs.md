@@ -1,4 +1,4 @@
-# Chapter 65 — Express vs NestJS
+# Chapter 69 — Express vs NestJS
 
 ## 📖 Definitions
 

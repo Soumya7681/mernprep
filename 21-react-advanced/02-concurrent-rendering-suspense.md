@@ -1,4 +1,4 @@
-# Chapter 35 — Concurrent Rendering & Suspense
+# Chapter 38 — Concurrent Rendering & Suspense
 
 ## 📖 Definition
 
@@ -174,4 +174,4 @@ With `renderToPipeableStream` (or Next.js), the server sends HTML in chunks: the
 
 ---
 
-[← React 19: Actions, use & Server Components](01-react-19-features.md) | [Index](../README.md) | [Next: Advanced Component Patterns →](03-advanced-patterns.md)
+[← React 19: Actions, use & Server Components](01-react-19-features.md) | [Index](../README.md) | [Next: SSR, Hydration & Rendering Strategies →](08-ssr-hydration.md)

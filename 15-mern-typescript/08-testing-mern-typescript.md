@@ -1,4 +1,4 @@
-# Chapter 90 — Testing a MERN + TypeScript App
+# Chapter 94 — Testing a MERN + TypeScript App
 
 ## 📖 Definition
 

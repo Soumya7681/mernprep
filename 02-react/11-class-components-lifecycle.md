@@ -1,4 +1,4 @@
-# Chapter 24 — Class Components & Lifecycle Methods
+# Chapter 25 — Class Components & Lifecycle Methods
 
 ## 📖 Definition
 
@@ -446,4 +446,4 @@ class Button extends React.Component {
 
 ---
 
-[← Functional Components](01-functional-components.md) | [Index](../README.md) | [Next: Props vs State →](02-props-vs-state.md)
+[← JSX, Fragments & StrictMode](12-jsx-fragments-strictmode.md) | [Index](../README.md) | [Next: Props vs State →](02-props-vs-state.md)

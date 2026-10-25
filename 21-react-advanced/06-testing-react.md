@@ -1,4 +1,4 @@
-# Chapter 39 — Testing React Apps
+# Chapter 43 — Testing React Apps
 
 ## 📖 Definition
 

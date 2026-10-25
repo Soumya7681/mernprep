@@ -1,4 +1,4 @@
-# Chapter 74 — MongoDB Indexing
+# Chapter 78 — MongoDB Indexing
 
 ## 📖 Definition
 

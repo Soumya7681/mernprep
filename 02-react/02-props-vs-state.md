@@ -1,4 +1,4 @@
-# Chapter 25 — Props vs State
+# Chapter 26 — Props vs State
 
 ## 📖 Definition
 
@@ -169,4 +169,4 @@ function Menu({ theme }) { return <span>{theme}</span>; }
 
 ---
 
-[← Class Components & Lifecycle](11-class-components-lifecycle.md) | [Index](../README.md) | [Next: useEffect →](03-useeffect.md)
+[← Class Components & Lifecycle](11-class-components-lifecycle.md) | [Index](../README.md) | [Next: useReducer →](13-usereducer.md)

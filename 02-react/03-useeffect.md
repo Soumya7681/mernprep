@@ -1,4 +1,4 @@
-# Chapter 26 — `useEffect` and the Component Lifecycle
+# Chapter 28 — `useEffect` and the Component Lifecycle
 
 ## 📖 Definition
 
@@ -167,4 +167,4 @@ useEffect(() => {
 
 ---
 
-[← Props vs State](02-props-vs-state.md) | [Index](../README.md) | [Next: useMemo / useCallback →](04-usememo-usecallback.md)
+[← useReducer](13-usereducer.md) | [Index](../README.md) | [Next: useMemo / useCallback →](04-usememo-usecallback.md)

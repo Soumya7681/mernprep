@@ -1,4 +1,4 @@
-# Chapter 120 — Self-Introduction
+# Chapter 128 — Self-Introduction
 
 ## 📖 Why It Matters
 

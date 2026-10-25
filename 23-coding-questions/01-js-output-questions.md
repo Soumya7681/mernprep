@@ -1,4 +1,4 @@
-# Chapter 93 — JS Predict-the-Output
+# Chapter 101 — JS Predict-the-Output
 
 ## 📖 Definition
 
@@ -1013,4 +1013,4 @@ console.log(t.f, Temp.unit, t.unit);
 
 ---
 
-[← MERN + TS Rapid-Fire Q&A](../15-mern-typescript/10-mern-interview-questions.md) | [Index](../README.md) | [Next: JS Polyfills & Implementations →](02-js-polyfills.md)
+[← Testing Redux with Jest](../25-testing-jest/04-testing-redux-jest.md) | [Index](../README.md) | [Next: JS Polyfills & Implementations →](02-js-polyfills.md)

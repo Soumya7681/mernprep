@@ -1,4 +1,4 @@
-# Chapter 34 — React 19: Actions, `use` & Server Components
+# Chapter 37 — React 19: Actions, `use` & Server Components
 
 ## 📖 Definition
 

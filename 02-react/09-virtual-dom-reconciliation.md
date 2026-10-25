@@ -1,4 +1,4 @@
-# Chapter 32 — Virtual DOM, Reconciliation & Fiber
+# Chapter 35 — Virtual DOM, Reconciliation & Fiber
 
 ## 📖 Definitions
 
@@ -431,4 +431,4 @@ const Item = React.memo(function Item({ name }) {
 
 ---
 
-[← Custom Hooks](08-custom-hooks.md) | [Index](../README.md) | [Next: Performance Optimization →](10-performance-optimization.md)
+[← useId, useSyncExternalStore & More Hooks](14-more-built-in-hooks.md) | [Index](../README.md) | [Next: Performance Optimization →](10-performance-optimization.md)

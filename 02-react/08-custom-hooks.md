@@ -1,4 +1,4 @@
-# Chapter 31 — Custom Hooks
+# Chapter 33 — Custom Hooks
 
 ## 📖 Definition
 
@@ -214,4 +214,4 @@ const { data, loading, error } = useAsync(
 
 ---
 
-[← Context API](07-context-api.md) | [Index](../README.md) | [Next: Virtual DOM, Reconciliation & Fiber →](09-virtual-dom-reconciliation.md)
+[← Context API](07-context-api.md) | [Index](../README.md) | [Next: useId, useSyncExternalStore & More Hooks →](14-more-built-in-hooks.md)

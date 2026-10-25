@@ -1,4 +1,4 @@
-# Chapter 52 — MVC Architecture (and Service Layer)
+# Chapter 56 — MVC Architecture (and Service Layer)
 
 ## 📖 Definition
 

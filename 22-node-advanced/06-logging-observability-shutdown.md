@@ -1,4 +1,4 @@
-# Chapter 62 — Logging, Observability & Graceful Shutdown
+# Chapter 66 — Logging, Observability & Graceful Shutdown
 
 ## 📖 Definition
 

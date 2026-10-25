@@ -1,4 +1,4 @@
-# Chapter 30 — Context API
+# Chapter 32 — Context API
 
 ## 📖 Definition
 

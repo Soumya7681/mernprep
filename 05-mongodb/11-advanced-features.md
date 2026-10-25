@@ -1,4 +1,4 @@
-# Chapter 80 — Advanced Features: Change Streams, Validation, Time Series & More
+# Chapter 84 — Advanced Features: Change Streams, Validation, Time Series & More
 
 ## 📖 Overview
 
