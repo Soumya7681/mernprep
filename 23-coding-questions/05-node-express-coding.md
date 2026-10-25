@@ -1,4 +1,4 @@
-# Chapter 105 — Node & Express Coding Questions
+# Chapter 106 — Node & Express Coding Questions
 
 ## 📖 Definition
 
@@ -524,4 +524,4 @@ events.on("error", logError);              // an unhandled "error" event would c
 
 ---
 
-[← React Coding Questions](04-react-coding-questions.md) | [Index](../README.md) | [Next: JavaScript Scenarios →](../24-scenario-questions/01-javascript-scenarios.md)
+[← Redux Coding Questions](06-redux-coding-questions.md) | [Index](../README.md) | [Next: JavaScript Scenarios →](../24-scenario-questions/01-javascript-scenarios.md)

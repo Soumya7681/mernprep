@@ -688,4 +688,4 @@ Toggling one row re-renders only that row, because the other `item` objects and 
 
 ---
 
-[← JS Problem Solving](03-js-problem-solving.md) | [Index](../README.md) | [Next: Node & Express Coding Questions →](05-node-express-coding.md)
+[← JS Problem Solving](03-js-problem-solving.md) | [Index](../README.md) | [Next: Redux Coding Questions →](06-redux-coding-questions.md)
