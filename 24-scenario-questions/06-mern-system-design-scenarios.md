@@ -1,4 +1,4 @@
-# Chapter 102 — MERN System Design Scenarios
+# Chapter 103 — MERN System Design Scenarios
 
 ## 📖 Definition
 

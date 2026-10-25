@@ -1,4 +1,4 @@
-# Chapter 87 — React with TypeScript
+# Chapter 88 — React with TypeScript
 
 ## 📖 Definition
 

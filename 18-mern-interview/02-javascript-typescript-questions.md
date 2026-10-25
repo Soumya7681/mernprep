@@ -1,4 +1,4 @@
-# Chapter 104 — MERN Interview: JavaScript & TypeScript Questions
+# Chapter 105 — MERN Interview: JavaScript & TypeScript Questions
 
 ## 📖 How to Use This Chapter
 

@@ -1,4 +1,4 @@
-# Chapter 92 — JS Predict-the-Output
+# Chapter 93 — JS Predict-the-Output
 
 ## 📖 Definition
 

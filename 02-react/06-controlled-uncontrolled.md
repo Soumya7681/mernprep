@@ -1,4 +1,4 @@
-# Chapter 28 — Controlled vs Uncontrolled Components
+# Chapter 29 — Controlled vs Uncontrolled Components
 
 ## 📖 Definition
 

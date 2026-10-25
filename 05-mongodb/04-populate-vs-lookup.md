@@ -1,4 +1,4 @@
-# Chapter 75 — `populate()` vs `$lookup`
+# Chapter 76 — `populate()` vs `$lookup`
 
 ## 📖 Definitions
 

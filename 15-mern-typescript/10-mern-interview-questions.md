@@ -1,4 +1,4 @@
-# Chapter 91 — MERN + TypeScript Interview Questions (Rapid-Fire)
+# Chapter 92 — MERN + TypeScript Interview Questions (Rapid-Fire)
 
 ## 📖 How to Use This Chapter
 

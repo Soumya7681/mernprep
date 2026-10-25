@@ -1,4 +1,4 @@
-# Chapter 114 — Scalable APIs
+# Chapter 115 — Scalable APIs
 
 ## 📖 Definition
 

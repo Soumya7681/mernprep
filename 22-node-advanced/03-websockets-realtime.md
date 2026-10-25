@@ -1,4 +1,4 @@
-# Chapter 58 — WebSockets & Real-Time
+# Chapter 59 — WebSockets & Real-Time
 
 ## 📖 Definition
 

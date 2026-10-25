@@ -1,4 +1,4 @@
-# Chapter 78 — Replication & Sharding
+# Chapter 79 — Replication & Sharding
 
 ## 📖 Definitions
 

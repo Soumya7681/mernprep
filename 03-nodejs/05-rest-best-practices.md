@@ -1,4 +1,4 @@
-# Chapter 50 — REST API Best Practices
+# Chapter 51 — REST API Best Practices
 
 ## 📖 Definition
 

@@ -1,4 +1,4 @@
-# Chapter 39 — Frontend Security & Accessibility
+# Chapter 40 — Frontend Security & Accessibility
 
 ## 📖 Definition
 

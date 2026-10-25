@@ -1,4 +1,4 @@
-# Chapter 49 — JWT Authentication & Refresh Tokens
+# Chapter 50 — JWT Authentication & Refresh Tokens
 
 ## 📖 Definition
 

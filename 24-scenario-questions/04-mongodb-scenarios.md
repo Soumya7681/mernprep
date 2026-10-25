@@ -1,4 +1,4 @@
-# Chapter 100 — MongoDB Scenarios
+# Chapter 101 — MongoDB Scenarios
 
 ## 📖 Definition
 

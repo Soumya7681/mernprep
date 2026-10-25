@@ -1,4 +1,4 @@
-# Chapter 26 — `useMemo` vs `useCallback`
+# Chapter 27 — `useMemo` vs `useCallback`
 
 ## 📖 Definition
 

@@ -1,4 +1,4 @@
-# Chapter 43 — RTK Query with TypeScript
+# Chapter 44 — RTK Query with TypeScript
 
 ## 📖 Definition
 

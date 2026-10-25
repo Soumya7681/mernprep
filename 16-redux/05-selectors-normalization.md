@@ -1,4 +1,4 @@
-# Chapter 44 — Selectors, Normalised State & Performance
+# Chapter 45 — Selectors, Normalised State & Performance
 
 ## 📖 Definitions
 

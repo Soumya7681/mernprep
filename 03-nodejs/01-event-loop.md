@@ -1,4 +1,4 @@
-# Chapter 46 — The Event Loop
+# Chapter 47 — The Event Loop
 
 ## 📖 Definition
 

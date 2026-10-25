@@ -1,4 +1,4 @@
-# Chapter 45 — Middleware, Persistence, Testing & When to Use Redux
+# Chapter 46 — Middleware, Persistence, Testing & When to Use Redux
 
 ## 📖 Definitions
 

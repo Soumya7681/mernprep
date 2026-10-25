@@ -1,4 +1,4 @@
-# Chapter 53 — File Uploads with AWS S3
+# Chapter 54 — File Uploads with AWS S3
 
 ## 📖 Definition
 

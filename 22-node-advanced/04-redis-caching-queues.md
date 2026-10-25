@@ -1,4 +1,4 @@
-# Chapter 59 — Redis Caching & Job Queues
+# Chapter 60 — Redis Caching & Job Queues
 
 ## 📖 Definition
 

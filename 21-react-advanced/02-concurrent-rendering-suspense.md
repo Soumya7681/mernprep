@@ -1,4 +1,4 @@
-# Chapter 34 — Concurrent Rendering & Suspense
+# Chapter 35 — Concurrent Rendering & Suspense
 
 ## 📖 Definition
 

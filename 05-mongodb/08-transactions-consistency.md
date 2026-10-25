@@ -1,4 +1,4 @@
-# Chapter 76 — Transactions, Consistency & Concurrency
+# Chapter 77 — Transactions, Consistency & Concurrency
 
 ## 📖 Definitions
 

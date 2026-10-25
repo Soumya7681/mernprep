@@ -1,4 +1,4 @@
-# Chapter 83 — MERN + TypeScript Project Setup & Architecture
+# Chapter 84 — MERN + TypeScript Project Setup & Architecture
 
 ## 📖 Definition
 

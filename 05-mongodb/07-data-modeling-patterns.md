@@ -1,4 +1,4 @@
-# Chapter 71 — Data Modelling & Schema Design Patterns
+# Chapter 72 — Data Modelling & Schema Design Patterns
 
 ## 📖 Definition
 

@@ -1,4 +1,4 @@
-# Chapter 32 — Performance Optimization
+# Chapter 33 — Performance Optimization
 
 ## 📖 Definition
 
@@ -214,4 +214,4 @@ gzip / brotli at CDN level
 
 ---
 
-[← Virtual DOM & Reconciliation](09-virtual-dom-reconciliation.md) | [Index](../README.md) | [Next: React 19: Actions, use & Server Components →](../21-react-advanced/01-react-19-features.md)
+[← Virtual DOM, Reconciliation & Fiber](09-virtual-dom-reconciliation.md) | [Index](../README.md) | [Next: React 19: Actions, use & Server Components →](../21-react-advanced/01-react-19-features.md)

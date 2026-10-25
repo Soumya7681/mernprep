@@ -1,4 +1,4 @@
-# Chapter 57 — Cluster, Worker Threads & Scaling
+# Chapter 58 — Cluster, Worker Threads & Scaling
 
 ## 📖 Definition
 

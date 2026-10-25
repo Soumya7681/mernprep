@@ -1,4 +1,4 @@
-# Chapter 97 — JavaScript Scenarios
+# Chapter 98 — JavaScript Scenarios
 
 ## 📖 Definition
 

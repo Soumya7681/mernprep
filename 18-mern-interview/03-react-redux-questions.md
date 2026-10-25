@@ -1,4 +1,4 @@
-# Chapter 105 — MERN Interview: React & Redux Questions
+# Chapter 106 — MERN Interview: React & Redux Questions
 
 ## 📖 How to Use This Chapter
 

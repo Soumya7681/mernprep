@@ -1,4 +1,4 @@
-# Chapter 35 — Advanced Component Patterns
+# Chapter 36 — Advanced Component Patterns
 
 ## 📖 Definition
 

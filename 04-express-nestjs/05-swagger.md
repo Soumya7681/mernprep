@@ -1,4 +1,4 @@
-# Chapter 68 — Swagger / OpenAPI in NestJS
+# Chapter 69 — Swagger / OpenAPI in NestJS
 
 ## 📖 Definition
 

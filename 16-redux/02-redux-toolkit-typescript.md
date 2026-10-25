@@ -1,4 +1,4 @@
-# Chapter 41 — Redux Toolkit with TypeScript
+# Chapter 42 — Redux Toolkit with TypeScript
 
 ## 📖 Definitions
 

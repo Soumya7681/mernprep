@@ -75,6 +75,8 @@ function Counter() {
 }
 ```
 
+The full class component API (lifecycle methods, `setState`, `PureComponent`, error boundaries) is covered in the [next chapter](11-class-components-lifecycle.md).
+
 ## 💻 Code Example — Composition
 
 ```jsx
@@ -136,4 +138,4 @@ function TodoList({ todos }) {
 
 ---
 
-[← Browser APIs & Web Performance](../20-javascript-advanced/08-browser-apis-performance.md) | [Index](../README.md) | [Next: Props vs State →](02-props-vs-state.md)
+[← Browser APIs & Web Performance](../20-javascript-advanced/08-browser-apis-performance.md) | [Index](../README.md) | [Next: Class Components & Lifecycle →](11-class-components-lifecycle.md)

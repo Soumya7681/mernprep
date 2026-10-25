@@ -1,4 +1,4 @@
-# Chapter 85 — Mongoose with TypeScript
+# Chapter 86 — Mongoose with TypeScript
 
 ## 📖 Definition
 

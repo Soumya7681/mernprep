@@ -1,4 +1,4 @@
-# Chapter 36 — Server State & Data Fetching
+# Chapter 37 — Server State & Data Fetching
 
 ## 📖 Definition
 

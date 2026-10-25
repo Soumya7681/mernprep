@@ -1,4 +1,4 @@
-# Chapter 117 — API Security
+# Chapter 118 — API Security
 
 ## 📖 Goal
 

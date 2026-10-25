@@ -1,4 +1,4 @@
-# Chapter 65 — Dependency Injection in NestJS
+# Chapter 66 — Dependency Injection in NestJS
 
 ## 📖 Definition
 

@@ -1,4 +1,4 @@
-# Chapter 66 — DTOs and Validation
+# Chapter 67 — DTOs and Validation
 
 ## 📖 Definition
 

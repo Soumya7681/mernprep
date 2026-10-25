@@ -1,4 +1,4 @@
-# Chapter 40 — Redux Core Concepts
+# Chapter 41 — Redux Core Concepts
 
 ## 📖 Definition
 

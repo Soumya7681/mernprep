@@ -1,4 +1,4 @@
-# Chapter 25 — `useEffect` and the Component Lifecycle
+# Chapter 26 — `useEffect` and the Component Lifecycle
 
 ## 📖 Definition
 

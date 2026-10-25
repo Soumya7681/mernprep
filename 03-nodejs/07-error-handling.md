@@ -1,4 +1,4 @@
-# Chapter 52 — Error Handling
+# Chapter 53 — Error Handling
 
 ## 📖 Definition
 

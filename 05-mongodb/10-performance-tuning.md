@@ -1,4 +1,4 @@
-# Chapter 77 — Performance Tuning & Query Optimisation
+# Chapter 78 — Performance Tuning & Query Optimisation
 
 ## 📖 Definition
 

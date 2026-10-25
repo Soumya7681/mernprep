@@ -1,4 +1,4 @@
-# Chapter 113 — Authentication Architecture
+# Chapter 114 — Authentication Architecture
 
 ## 📖 Definition
 
