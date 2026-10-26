@@ -233,37 +233,45 @@ export const MANIFEST: Section[] = [
     ],
   },
   {
+    title: "Special Questions",
+    folder: "26-special-questions",
+    chapters: [
+      { num: "121", file: "01-react-shared-questions.md", title: "React: 40 Shared Interview Questions" },
+      { num: "122", file: "02-node-shared-questions.md",  title: "Node.js: Shared Interview Questions" },
+    ],
+  },
+  {
     title: "Machine Coding",
     folder: "06-machine-coding",
     chapters: [
-      { num: "121", file: "01-frontend-tasks.md", title: "Frontend Tasks" },
-      { num: "122", file: "02-backend-tasks.md",  title: "Backend Tasks" },
+      { num: "123", file: "01-frontend-tasks.md", title: "Frontend Tasks" },
+      { num: "124", file: "02-backend-tasks.md",  title: "Backend Tasks" },
     ],
   },
   {
     title: "System Design",
     folder: "07-system-design",
     chapters: [
-      { num: "123", file: "01-authentication.md",            title: "Authentication" },
-      { num: "124", file: "02-scalable-apis.md",             title: "Scalable APIs" },
-      { num: "125", file: "03-caching.md",                   title: "Caching" },
-      { num: "126", file: "04-monolith-vs-microservices.md", title: "Monolith vs Microservices" },
-      { num: "127", file: "05-api-security.md",              title: "API Security" },
+      { num: "125", file: "01-authentication.md",            title: "Authentication" },
+      { num: "126", file: "02-scalable-apis.md",             title: "Scalable APIs" },
+      { num: "127", file: "03-caching.md",                   title: "Caching" },
+      { num: "128", file: "04-monolith-vs-microservices.md", title: "Monolith vs Microservices" },
+      { num: "129", file: "05-api-security.md",              title: "API Security" },
     ],
   },
   {
     title: "DSA & Coding",
     folder: "",
     chapters: [
-      { num: "128", file: "11-dsa-coding-questions.md", title: "Coding Question Tracker" },
+      { num: "130", file: "11-dsa-coding-questions.md", title: "Coding Question Tracker" },
     ],
   },
   {
     title: "HR & Behavioral",
     folder: "08-hr-behavioral",
     chapters: [
-      { num: "129", file: "01-self-introduction.md", title: "Self-Introduction" },
-      { num: "130", file: "02-common-questions.md",  title: "Common Questions" },
+      { num: "131", file: "01-self-introduction.md", title: "Self-Introduction" },
+      { num: "132", file: "02-common-questions.md",  title: "Common Questions" },
     ],
   },
   // ── Part 4 · Revision ──
@@ -271,8 +279,8 @@ export const MANIFEST: Section[] = [
     title: "Reference",
     folder: "",
     chapters: [
-      { num: "131", file: "09-revision-sheet.md", title: "Night-Before Revision" },
-      { num: "132", file: "10-appendix.md",       title: "Documents & Q&A" },
+      { num: "133", file: "09-revision-sheet.md", title: "Night-Before Revision" },
+      { num: "134", file: "10-appendix.md",       title: "Documents & Q&A" },
     ],
   },
 ];

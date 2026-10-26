@@ -1,4 +1,4 @@
-# Chapter 130 — Common HR & Behavioral Questions
+# Chapter 132 — Common HR & Behavioral Questions
 
 ## 📖 The Framework: STAR
 

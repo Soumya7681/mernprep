@@ -20,6 +20,8 @@
 
 ## 💻 Code Example — Form With an Action and `useActionState`
 
+> **`useActionState` in one line:** runs your form's submit function and gives you its latest result (such as an error message) plus an `isPending` flag, with no extra `useState` needed.
+
 ```jsx
 import { useActionState } from "react";
 
@@ -49,6 +51,8 @@ No `onSubmit`, no `preventDefault`, no separate loading state. React resets unco
 
 ## 💻 Code Example — `useFormStatus` in a Reusable Button
 
+> **`useFormStatus` in one line:** lets any component inside a `<form>` (like a submit button) know whether that form is currently submitting, without passing props down.
+
 ```jsx
 import { useFormStatus } from "react-dom";
 
@@ -59,6 +63,8 @@ function SubmitButton({ children }) {
 ```
 
 ## 💻 Code Example — `useOptimistic` for Instant UI
+
+> **`useOptimistic` in one line:** shows the expected result on screen immediately (for example, a like count going up) while the server request runs, and goes back to the real value if the request fails.
 
 ```jsx
 import { useOptimistic, startTransition } from "react";
@@ -78,6 +84,8 @@ function LikeButton({ postId, likes }) {
 ```
 
 ## 💻 Code Example — `use()` With Suspense
+
+> **`use` in one line:** reads the value of a promise (waiting with Suspense until it resolves) or of a context, and unlike other hooks it can be called inside `if` statements and loops.
 
 ```jsx
 import { use, Suspense } from "react";

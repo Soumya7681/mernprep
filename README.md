@@ -19,6 +19,7 @@
 - **MERN + TypeScript:** the whole stack wired together with types, end to end.
 - **Coding Questions:** 45 predict-the-output puzzles (every answer verified by running it), 20 polyfills, 22 problem-solving exercises, 16 React components and 13 Node/Express tasks — all with working solutions.
 - **Scenario-Based Questions:** JavaScript, React, Node, MongoDB, production incidents and MERN system design — each with a structured answer.
+- **Special Questions:** React and Node.js questions shared by the MERN STACK TI group from real interviews, with simple answers.
 - **MERN Interview, Machine Coding, System Design, DSA tracker, HR and a night-before revision sheet.**
 
 Every concept chapter follows the same pattern:
@@ -34,7 +35,7 @@ Every concept chapter follows the same pattern:
 | **0 · Know the role** | Role Requirements |
 | **1 · Core + advanced** | JavaScript → JavaScript Advanced → React → React Advanced → Redux → Node.js → Node.js Advanced → Express / NestJS → MongoDB |
 | **2 · Putting it together** | MERN Stack + TypeScript |
-| **3 · Interview rounds** | Coding Questions → Scenario-Based Questions → MERN Interview → Machine Coding → System Design → DSA & Coding → HR & Behavioral |
+| **3 · Interview rounds** | Coding Questions → Scenario-Based Questions → MERN Interview → Special Questions → Machine Coding → System Design → DSA & Coding → HR & Behavioral |
 | **4 · Revision** | Night-Before Revision, Documents & Q&A |
 
 Every chapter ends with Previous / Next links, so you can read it straight through. Start with [Chapter 01 — MERN Role Requirements & Skill Matrix](00-requirements/01-mern-role-requirements.md).

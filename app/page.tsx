@@ -80,7 +80,7 @@ const ROUNDS: Array<{ name: string; checks: string; sections: string[] }> = [
   { name: "Frontend", checks: "Hooks, rendering, React 19, state and a component built live.", sections: ["React", "React Advanced", "Redux"] },
   { name: "Backend", checks: "APIs, auth, streams, scaling, security and data modelling.", sections: ["Node.js", "Node.js Advanced", "Express / NestJS", "MongoDB", "MERN Stack + TypeScript"] },
   { name: "Coding", checks: "Output puzzles, polyfills and features written under a timer.", sections: ["Coding Questions", "Machine Coding", "DSA & Coding"] },
-  { name: "Scenarios", checks: "Debugging, production incidents and design trade-offs, out loud.", sections: ["Scenario-Based Questions", "System Design", "MERN Interview"] },
+  { name: "Scenarios", checks: "Debugging, production incidents and design trade-offs, out loud.", sections: ["Scenario-Based Questions", "System Design", "MERN Interview", "Special Questions"] },
   { name: "HR", checks: "Your story, your project, and why this team.", sections: ["HR & Behavioral"] },
 ];
 

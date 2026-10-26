@@ -158,4 +158,4 @@ Answer honestly, e.g.: "Yes, I've delivered features end to end. I'm slightly st
 
 ---
 
-[← Live Coding Tasks](07-live-coding-tasks.md) | [Index](../README.md) | [Next: Frontend Tasks →](../06-machine-coding/01-frontend-tasks.md)
+[← Live Coding Tasks](07-live-coding-tasks.md) | [Index](../README.md) | [Next: React: 40 Shared Interview Questions →](../26-special-questions/01-react-shared-questions.md)

@@ -1,4 +1,4 @@
-# Chapter 125 — Caching
+# Chapter 127 — Caching
 
 ## 📖 Definition
 

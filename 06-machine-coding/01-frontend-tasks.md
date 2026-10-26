@@ -1,4 +1,4 @@
-# Chapter 121 — Frontend Machine Coding Tasks
+# Chapter 123 — Frontend Machine Coding Tasks
 
 ## 📖 What Interviewers Are Testing
 
@@ -383,4 +383,4 @@ src/
 
 ---
 
-[← Git, Agile, Testing & Deployment](../18-mern-interview/08-git-agile-deployment-questions.md) | [Index](../README.md) | [Next: Backend Tasks →](02-backend-tasks.md)
+[← Node.js: Shared Interview Questions](../26-special-questions/02-node-shared-questions.md) | [Index](../README.md) | [Next: Backend Tasks →](02-backend-tasks.md)

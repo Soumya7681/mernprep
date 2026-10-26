@@ -1,4 +1,4 @@
-# Chapter 123 — Authentication Architecture
+# Chapter 125 — Authentication Architecture
 
 ## 📖 Definition
 
