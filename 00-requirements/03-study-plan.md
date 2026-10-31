@@ -17,6 +17,19 @@ A week-by-week plan through this book for someone with a day job: about **1.5 ho
 | 7 | MongoDB + TypeScript | MongoDB, MERN + TS | Query Practice, MongoDB scenarios | Convert the API to TypeScript; add indexes and an aggregation report |
 | 8 | Interview mode | Scenario-Based, System Design, MERN Interview, HR | 2 mock interviews, production + system design scenarios | Deploy the full app; write the README and architecture diagram |
 
+## ➕ Add-On Weeks: GraphQL, SQL, Python & FastAPI
+
+Many MERN job descriptions also list **GraphQL**, **SQL/PostgreSQL** or **Python/FastAPI**. If yours does, add these weeks after week 7 (or swap them in for parts of weeks 5–7 that the role doesn't need). Each week uses the same ~15 hours.
+
+| Week | Focus | Read | Practise | Build / prove |
+|---|---|---|---|---|
+| A | GraphQL | GraphQL (all 5) | GraphQL Coding Questions, GraphQL Scenarios | Add a `/graphql` endpoint to your Express API with DataLoader, cursor pagination and a depth limit; move one React screen to Apollo Client |
+| B | SQL | SQL (all 5) | SQL Query Practice, SQL Coding Questions, SQL Scenarios | Model orders and payments in Postgres; write the monthly revenue, top-N per group and retention queries; show `EXPLAIN ANALYZE` before and after an index |
+| C | Python | Python, Python Advanced | Python Coding Questions, the predict-the-output puzzles | Rewrite three of your JS utilities in Python (retry, TTL cache, concurrency-limited fetch) with pytest tests |
+| D | FastAPI | FastAPI, FastAPI Advanced | FastAPI Coding Questions, Python & FastAPI Scenarios | A FastAPI "AI service" next to your Node API: shared JWT, Redis cache, a rate limit, one SSE endpoint, Docker Compose |
+
+Only doing one? **SQL** is the most widely useful, because it comes up even in MongoDB-heavy interviews ("why not Postgres?"). Do **Python** before **FastAPI**; FastAPI assumes type hints, decorators and async.
+
 ## ✅ Daily Routine (90 minutes)
 
 ```text
@@ -38,6 +51,10 @@ You are ready to move on when you can, **without notes**:
 - **Week 6:** explain streams + backpressure; explain cluster vs worker threads.
 - **Week 7:** design a schema for orders and explain your indexes using `explain()` output.
 - **Week 8:** answer 5 random scenario questions in the 5-step structure from [Chapter 02](02-interview-process.md).
+- **Add-on A (GraphQL):** explain the N+1 problem and DataLoader; say why GraphQL errors come back with HTTP 200.
+- **Add-on B (SQL):** write a top-3-per-department query and explain `RANK` vs `DENSE_RANK`; explain the isolation levels.
+- **Add-on C (Python):** explain the GIL and when to use threads vs processes vs asyncio; write a decorator from memory.
+- **Add-on D (FastAPI):** explain `async def` vs `def` endpoints; walk through `Depends` for the DB session and the current user.
 
 ## 🧰 The Portfolio Project That Covers Everything
 
@@ -54,6 +71,9 @@ Build one app and you will have a story for almost every interview question. Exa
 | Order confirmation email | BullMQ job queue, retries |
 | Tests and CI | Vitest/Jest, RTL, Supertest, GitHub Actions |
 | Deployment | Docker, environment config, health checks, logging |
+| *(Add-on)* GraphQL product feed | Schema design, DataLoader, cursor pagination, Apollo cache |
+| *(Add-on)* Orders and payments in Postgres | Joins, transactions, `FOR UPDATE`, window-function reports |
+| *(Add-on)* FastAPI AI service | Pydantic, dependency injection, shared JWT with Node, SSE streaming |
 
 ## 🎯 Likely Interview Questions This Plan Prepares You For
 

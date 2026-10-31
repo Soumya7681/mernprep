@@ -1,4 +1,4 @@
-# Chapter 133 — Night-Before Revision Sheet
+# Chapter 165 — Night-Before Revision Sheet
 
 > One page. Read it slowly. Sleep early.
 
@@ -140,6 +140,78 @@ export class UserController {
 
 ---
 
+## 🩷 GraphQL
+
+- One endpoint; **client picks the fields**; typed **schema** is the contract.
+- `query` (reads, may run in parallel) · `mutation` (writes, run **in order**) · `subscription` (pushes, `graphql-ws`).
+- Resolver = `(parent, args, context, info)`; **auth in context, authorisation in resolvers**.
+- **N+1** → **DataLoader**, created **per request**; batch returns results in **key order**.
+- Errors come back with **HTTP 200** + `errors[]` → monitor by operation name and `extensions.code`.
+- Protect it: **depth + cost limits**, max `first`, **safelist** first-party queries, introspection off.
+- Apollo cache updates **objects** by `__typename:id`, **not lists** → `refetchQueries` / `cache.modify`.
+- Never remove fields: `@deprecated`, watch usage, then delete.
+
+---
+
+## 🐍 Python
+
+- **Mutable default** `def f(x, l=[])` is shared → use `None`.
+- `is` = same object; `==` = same value. `[[0]*2]*2` shares the inner list.
+- `list` O(n) `in` vs `set`/`dict` **O(1)**.
+- **Decorator** = function in, function out; always `functools.wraps`.
+- **Generator** = lazy, one pass, constant memory (`yield`, `yield from`).
+- **GIL**: threads help **I/O**, not CPU → CPU work = **processes**.
+- `async def` returns a coroutine; nothing runs until `await` / `create_task`; **never block the loop**.
+- Profile first: `cProfile` / `py-spy`; memory: `tracemalloc` snapshots.
+- pytest fixtures, `parametrize`, **patch where it's used**.
+
+```python
+@functools.wraps(fn)
+def wrapper(*args, **kwargs):
+    start = time.perf_counter()
+    try:
+        return fn(*args, **kwargs)
+    finally:
+        log(fn.__name__, time.perf_counter() - start)
+```
+
+---
+
+## 🐘 SQL
+
+- Order: **FROM → WHERE → GROUP BY → HAVING → SELECT → ORDER BY → LIMIT**.
+- `WHERE` filters rows; `HAVING` filters groups.
+- `NULL = NULL` is **not true**; `NOT IN` + a NULL → **no rows** → use `NOT EXISTS`.
+- `LEFT JOIN` + `WHERE right.col = x` silently becomes an **INNER JOIN** → move it to `ON`.
+- **ROW_NUMBER** 1,2,3,4 · **RANK** 1,2,2,4 · **DENSE_RANK** 1,2,2,3.
+- Top-N per group = window function in a CTE, filter outside.
+- Composite index = **leftmost prefix**; equality → sort → range; `EXPLAIN ANALYZE`.
+- **ACID**; Postgres default **Read Committed**; overselling → `UPDATE ... WHERE stock > 0` or `FOR UPDATE`.
+- 1NF atomic · 2NF whole key · 3NF nothing but the key.
+
+```sql
+SELECT dept, name, salary FROM (
+  SELECT d.name AS dept, e.name, e.salary,
+         DENSE_RANK() OVER (PARTITION BY e.dept_id ORDER BY e.salary DESC) AS rnk
+  FROM employees e JOIN departments d ON d.id = e.dept_id
+) t WHERE rnk <= 3;
+```
+
+---
+
+## ⚡ FastAPI
+
+- Starlette (web) + **Pydantic** (validation) + Uvicorn (ASGI server); docs at `/docs`.
+- Path / query / body decided by the **function signature**; bad input → **422**.
+- `response_model` **filters** output (never leak `hashed_password`).
+- `async def` runs **on the loop**; `def` runs in a **thread pool**.
+- `Depends()` for DB session (`yield`), current user, roles; cached **per request**; override in tests.
+- JWT: `OAuth2PasswordBearer` → `get_current_user`; **401** unknown vs **403** not allowed.
+- `lifespan` for startup/shutdown (`on_event` deprecated); `BackgroundTasks` ≠ a real queue.
+- Cache-aside in Redis, rate limits in Redis, `Idempotency-Key` for payments, SSE for LLM streaming.
+
+---
+
 ## 🟠 System Design
 
 - **Stateless API** → horizontally scale behind LB.
@@ -173,7 +245,7 @@ export class UserController {
 
 ## 🎯 If You Have 60 Seconds
 
-> "Closures, hooks, event loop, JWT, REST, indexes, $match early, cache-aside, STAR, numbers > adjectives, ask questions."
+> "Closures, hooks, event loop, JWT, REST, indexes, $match early, DataLoader, NOT EXISTS, don't block the loop, cache-aside, STAR, numbers > adjectives, ask questions."
 
 That's your kernel.
 

@@ -457,6 +457,7 @@ export const WEB_TRACKS: RoadmapTrack[] = [
               "Error shapes and problem+json",
               "Backwards-compatible API evolution",
             ],
+            ref: { href: "/30-fastapi/01-fastapi-fundamentals", label: "Ch — FastAPI Fundamentals (Pydantic & OpenAPI)" },
           },
           {
             id: "be-auth",
@@ -482,6 +483,7 @@ export const WEB_TRACKS: RoadmapTrack[] = [
               "gRPC, protobuf and streaming",
               "Choosing between REST, GraphQL and RPC",
             ],
+            ref: { href: "/27-graphql/03-graphql-advanced-server", label: "Ch — Advanced GraphQL Server Topics" },
           },
           {
             id: "be-layering",
@@ -494,6 +496,7 @@ export const WEB_TRACKS: RoadmapTrack[] = [
               "Domain modelling basics",
               "Configuration and the twelve-factor app",
             ],
+            ref: { href: "/30-fastapi/02-dependency-injection-auth-middleware", label: "Ch — Dependency Injection, Auth & Middleware" },
           },
         ],
       },
@@ -516,7 +519,7 @@ export const WEB_TRACKS: RoadmapTrack[] = [
               "Aggregations and GROUP BY semantics",
               "NULL behaviour and three-valued logic",
             ],
-            ref: { href: "/05-mongodb/01-mongoose-schemas", label: "Ch — Mongoose Schemas" },
+            ref: { href: "/29-sql/02-aggregation-subqueries-window-functions", label: "Ch — Aggregation, Subqueries, CTEs & Window Functions" },
           },
           {
             id: "be-indexing",
@@ -529,6 +532,7 @@ export const WEB_TRACKS: RoadmapTrack[] = [
               "Selectivity, cardinality and index choice",
               "When an index makes things worse",
             ],
+            ref: { href: "/29-sql/03-indexes-transactions-normalization", label: "Ch — Indexes, Transactions & Normalisation" },
           },
           {
             id: "be-transactions",
@@ -541,6 +545,7 @@ export const WEB_TRACKS: RoadmapTrack[] = [
               "Optimistic vs pessimistic locking",
               "Deadlocks: causes and avoidance",
             ],
+            ref: { href: "/29-sql/03-indexes-transactions-normalization", label: "Ch — Indexes, Transactions & Normalisation" },
           },
           {
             id: "be-modelling",
@@ -587,6 +592,7 @@ export const WEB_TRACKS: RoadmapTrack[] = [
               "Dead letter queues and poison messages",
               "Ordering guarantees and partitioning",
             ],
+            ref: { href: "/32-fastapi-advanced/01-caching-rate-limiting-background-jobs", label: "Ch — Caching, Rate Limiting & Background Jobs" },
           },
           {
             id: "be-resilience",
@@ -681,6 +687,7 @@ export const WEB_TRACKS: RoadmapTrack[] = [
               "Profiling CPU and memory",
               "N+1 queries and batch loading",
             ],
+            ref: { href: "/31-python-advanced/03-performance-memory-profiling", label: "Ch — Performance, Memory & Profiling" },
           },
           {
             id: "be-testing",
@@ -875,6 +882,7 @@ export const WEB_TRACKS: RoadmapTrack[] = [
               "ORM query patterns and their SQL output",
               "Indexes and the N+1 problem",
             ],
+            ref: { href: "/29-sql/01-sql-fundamentals-joins", label: "Ch — SQL Fundamentals & Joins" },
           },
           {
             id: "fs-auth",
@@ -1103,6 +1111,7 @@ export const WEB_TRACKS: RoadmapTrack[] = [
               "Cost, latency and caching",
               "Evaluating output quality",
             ],
+            ref: { href: "/32-fastapi-advanced/03-fastapi-in-mern-architecture", label: "Ch — FastAPI in a MERN Architecture" },
           },
         ],
       },

@@ -1,4 +1,4 @@
-# Chapter 102 — JS Polyfills & Implementations
+# Chapter 127 — JS Polyfills & Implementations
 
 ## 📖 Definition
 

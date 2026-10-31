@@ -1,4 +1,4 @@
-# Chapter 103 — JS Problem Solving
+# Chapter 128 — JS Problem Solving
 
 ## 📖 Definition
 

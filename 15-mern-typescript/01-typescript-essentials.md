@@ -1,4 +1,4 @@
-# Chapter 87 — TypeScript Essentials for MERN
+# Chapter 112 — TypeScript Essentials for MERN
 
 ## 📖 Definition
 
@@ -232,4 +232,4 @@ type EventName = `${Entity}:${"created" | "deleted"}`;  // "user:created" | ...
 
 ---
 
-[← MongoDB Rapid-Fire Q&A](../05-mongodb/13-mongodb-interview-questions.md) | [Index](../README.md) | [Next: Project Setup & Architecture →](02-project-setup-architecture.md)
+[← FastAPI Interview Questions](../32-fastapi-advanced/04-fastapi-interview-questions.md) | [Index](../README.md) | [Next: Project Setup & Architecture →](02-project-setup-architecture.md)

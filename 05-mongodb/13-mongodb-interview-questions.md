@@ -116,4 +116,4 @@ Use your own real numbers — they make the answer believable.
 
 ---
 
-[← Query Practice Problems](12-query-practice.md) | [Index](../README.md) | [Next: TypeScript Essentials →](../15-mern-typescript/01-typescript-essentials.md)
+[← Query Practice Problems](12-query-practice.md) | [Index](../README.md) | [Next: GraphQL Fundamentals & Schema Design →](../27-graphql/01-graphql-fundamentals.md)

@@ -1,4 +1,4 @@
-# Chapter 110 — MongoDB Scenarios
+# Chapter 139 — MongoDB Scenarios
 
 ## 📖 Definition
 
@@ -194,4 +194,4 @@ For logs/metrics, consider **time-series collections** or archiving to cheaper s
 
 ---
 
-[← Node & Express Scenarios](03-node-express-scenarios.md) | [Index](../README.md) | [Next: Production Incident Scenarios →](05-production-incident-scenarios.md)
+[← Node & Express Scenarios](03-node-express-scenarios.md) | [Index](../README.md) | [Next: GraphQL Scenarios →](07-graphql-scenarios.md)

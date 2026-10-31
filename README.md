@@ -16,9 +16,11 @@
 - **React, core and advanced:** hooks and rendering, then React 19 (Actions, `use`, Server Components), concurrent rendering and Suspense, advanced component patterns, server state with TanStack Query, forms and routing, testing, security and accessibility. Plus Redux Toolkit and RTK Query.
 - **Node.js, core and advanced:** middleware, auth, REST, errors, uploads, pagination and rate limiting, then streams and backpressure, cluster and worker threads, WebSockets, Redis caching and BullMQ queues, OWASP security, observability and graceful shutdown, performance and memory leaks, and API testing.
 - **Express / NestJS and MongoDB:** dependency injection, DTOs and guards; MongoDB data modelling, indexing, aggregation, transactions, replication and sharding, with 25 query problems.
+- **GraphQL:** schema design and the type system, Apollo Server with Express and Mongoose, N+1 and DataLoader, cursor pagination, subscriptions, security and federation, Apollo Client in React, and 56 interview questions with detailed answers.
+- **Python, SQL and FastAPI, core and advanced:** Python for JavaScript developers (data types, decorators, generators, OOP, type hints), then asyncio and the GIL, descriptors and metaclasses, profiling and memory, and pytest/uv tooling; SQL on PostgreSQL (joins, window functions, CTEs, indexes, transactions, normalisation, practice queries); FastAPI (Pydantic, dependency injection, JWT auth, SQLAlchemy 2.0, testing, deployment), then Redis caching, rate limiting, idempotency, Celery, SSE streaming and running FastAPI next to a Node backend.
 - **MERN + TypeScript:** the whole stack wired together with types, end to end.
-- **Coding Questions:** 45 predict-the-output puzzles (every answer verified by running it), 20 polyfills, 22 problem-solving exercises, 16 React components and 13 Node/Express tasks — all with working solutions.
-- **Scenario-Based Questions:** JavaScript, React, Node, MongoDB, production incidents and MERN system design — each with a structured answer.
+- **Coding Questions:** 45 predict-the-output puzzles (every answer verified by running it), 20 polyfills, 22 problem-solving exercises, 16 React components and 13 Node/Express tasks, plus 15 Python, 20 SQL, 10 FastAPI and 10 GraphQL tasks — all with working solutions.
+- **Scenario-Based Questions:** JavaScript, React, Node, MongoDB, GraphQL, SQL, Python & FastAPI, production incidents and MERN system design — each with a structured answer.
 - **Special Questions:** React and Node.js questions shared by the MERN STACK TI group from real interviews, with simple answers.
 - **MERN Interview, Machine Coding, System Design, DSA tracker, HR and a night-before revision sheet.**
 
@@ -33,7 +35,7 @@ Every concept chapter follows the same pattern:
 | Part | Sections |
 |------|----------|
 | **0 · Know the role** | Role Requirements |
-| **1 · Core + advanced** | JavaScript → JavaScript Advanced → React → React Advanced → Redux → Node.js → Node.js Advanced → Express / NestJS → MongoDB |
+| **1 · Core + advanced** | JavaScript → JavaScript Advanced → React → React Advanced → Redux → Node.js → Node.js Advanced → Express / NestJS → MongoDB → GraphQL → Python → Python Advanced → SQL → FastAPI → FastAPI Advanced |
 | **2 · Putting it together** | MERN Stack + TypeScript |
 | **3 · Interview rounds** | Coding Questions → Scenario-Based Questions → MERN Interview → Special Questions → Machine Coding → System Design → DSA & Coding → HR & Behavioral |
 | **4 · Revision** | Night-Before Revision, Documents & Q&A |

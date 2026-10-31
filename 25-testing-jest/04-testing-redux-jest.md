@@ -1,4 +1,4 @@
-# Chapter 100 — Testing Redux with Jest
+# Chapter 125 — Testing Redux with Jest
 
 ## 📖 Definition
 

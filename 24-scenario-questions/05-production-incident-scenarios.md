@@ -1,4 +1,4 @@
-# Chapter 111 — Production Incident Scenarios
+# Chapter 143 — Production Incident Scenarios
 
 ## 📖 Definition
 
@@ -154,4 +154,4 @@ Action items  — owner + due date (tests, alerts, runbooks, process changes)
 
 ---
 
-[← MongoDB Scenarios](04-mongodb-scenarios.md) | [Index](../README.md) | [Next: MERN System Design Scenarios →](06-mern-system-design-scenarios.md)
+[← Python & FastAPI Scenarios](09-python-fastapi-scenarios.md) | [Index](../README.md) | [Next: MERN System Design Scenarios →](06-mern-system-design-scenarios.md)

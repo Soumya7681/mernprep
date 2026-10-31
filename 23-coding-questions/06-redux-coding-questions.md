@@ -1,4 +1,4 @@
-# Chapter 105 — Redux Coding Questions
+# Chapter 130 — Redux Coding Questions
 
 ## 📖 Definition
 

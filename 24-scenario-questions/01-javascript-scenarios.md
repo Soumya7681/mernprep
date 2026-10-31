@@ -1,4 +1,4 @@
-# Chapter 107 — JavaScript Scenarios
+# Chapter 136 — JavaScript Scenarios
 
 ## 📖 Definition
 
@@ -219,4 +219,4 @@ In React, TanStack Query/RTK Query do this automatically via query keys.
 
 ---
 
-[← Node & Express Coding Questions](../23-coding-questions/05-node-express-coding.md) | [Index](../README.md) | [Next: React Scenarios →](02-react-scenarios.md)
+[← GraphQL Coding Questions](../23-coding-questions/10-graphql-coding-questions.md) | [Index](../README.md) | [Next: React Scenarios →](02-react-scenarios.md)
