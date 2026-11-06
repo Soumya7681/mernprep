@@ -1,4 +1,4 @@
-# Chapter 08 — Prototype & Prototypal Inheritance
+# Chapter 8 — Prototype & Prototypal Inheritance
 
 ## 📖 Definition
 

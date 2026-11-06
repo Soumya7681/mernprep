@@ -1,4 +1,4 @@
-# Chapter 04 — Closures
+# Chapter 4 — Closures
 
 ## 📖 Definition
 

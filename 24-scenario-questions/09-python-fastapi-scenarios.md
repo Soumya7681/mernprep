@@ -1,4 +1,4 @@
-# Chapter 142 — Python & FastAPI Scenarios
+# Chapter 143 — Python & FastAPI Scenarios
 
 ## 📖 Definition
 

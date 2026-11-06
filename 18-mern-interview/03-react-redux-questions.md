@@ -1,4 +1,4 @@
-# Chapter 147 — MERN Interview: React & Redux Questions
+# Chapter 148 — MERN Interview: React & Redux Questions
 
 ## 📖 How to Use This Chapter
 

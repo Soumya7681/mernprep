@@ -1,4 +1,4 @@
-# Chapter 112 — TypeScript Essentials for MERN
+# Chapter 113 — TypeScript Essentials for MERN
 
 ## 📖 Definition
 

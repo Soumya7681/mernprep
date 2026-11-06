@@ -1,4 +1,4 @@
-# Chapter 114 — Building a Typed Express Server
+# Chapter 115 — Building a Typed Express Server
 
 ## 📖 Definition
 

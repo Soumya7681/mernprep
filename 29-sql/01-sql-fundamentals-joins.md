@@ -18,6 +18,23 @@ The examples in this section use **PostgreSQL**, the usual choice with FastAPI a
 | **DCL**: Data Control | `GRANT`, `REVOKE` | Permissions |
 | **TCL**: Transaction Control | `BEGIN`, `COMMIT`, `ROLLBACK`, `SAVEPOINT` | Transactions |
 
+## 🧒 In Simple Words
+
+- **Database:** an organised place where an app keeps its data so it can be found, changed and protected.
+- **Table:** like a spreadsheet sheet. Each **row** is one record (one employee) and each **column** is one detail about it (name, salary).
+- **Primary key:** the one column that gives every row its own unique identity, like a roll number.
+- **Foreign key:** a column that points to a row in another table, like writing a customer's roll number on their order slip. It stops you pointing at someone who doesn't exist.
+- **Constraint:** a rule the database checks for you (cannot be empty, must be unique, must be positive).
+- **Query:** a question you ask the database, such as "show me all employees in IT".
+- **Join:** a way to put two tables side by side by matching the linking column, for example orders with the customer's name.
+  - **Inner join:** only the pairs that match on both sides.
+  - **Left join:** everything from the left table, plus matches from the right (blanks where there is no match).
+  - **Full join:** everything from both sides.
+  - **Cross join:** every row paired with every row (all combinations).
+  - **Self join:** a table matched with itself, e.g. employee and manager.
+- **NULL:** "no value yet / unknown". It is not zero and not an empty text.
+- **Union:** stacks the rows of two queries into one list.
+
 ## 🔍 MongoDB → SQL Vocabulary
 
 | MongoDB | SQL |
@@ -32,6 +49,42 @@ The examples in this section use **PostgreSQL**, the usual choice with FastAPI a
 | Aggregation pipeline | `GROUP BY`, window functions, CTEs |
 | `find({ age: { $gt: 18 } })` | `SELECT * FROM users WHERE age > 18` |
 | Schema in Mongoose | Schema enforced by the database itself |
+
+## 🔍 SQL vs MySQL (and the Other Dialects)
+
+**SQL is the language. MySQL is one product that understands it.** Think "JavaScript vs Node.js": one is the specification, the other is an implementation. Every RDBMS speaks standard SQL (`SELECT`, `JOIN`, `GROUP BY`) and adds its own extensions.
+
+| Task | PostgreSQL | MySQL | SQL Server | Oracle |
+|---|---|---|---|---|
+| Limit rows | `LIMIT 10` | `LIMIT 10` | `SELECT TOP 10` / `OFFSET … FETCH` | `FETCH FIRST 10 ROWS ONLY` |
+| Auto ID | `GENERATED … AS IDENTITY` / `SERIAL` | `AUTO_INCREMENT` | `IDENTITY(1,1)` | sequence / identity |
+| String concat | `a \|\| b` | `CONCAT(a, b)` | `a + b` / `CONCAT` | `a \|\| b` |
+| Current time | `now()` | `NOW()` | `GETDATE()` | `SYSDATE` |
+| Upsert | `ON CONFLICT DO UPDATE` | `ON DUPLICATE KEY UPDATE` | `MERGE` | `MERGE` |
+| `FULL OUTER JOIN` | Yes | **No** (emulate with `UNION`) | Yes | Yes |
+| Default isolation | Read Committed | Repeatable Read | Read Committed | Read Committed |
+
+**Interview answer:** "SQL is the standard query language. MySQL, PostgreSQL, SQL Server and Oracle are database engines that implement it with their own extensions, so a portable query sticks to standard SQL and anything dialect-specific has to be checked."
+
+---
+
+## 🔍 NULL vs 0 vs an Empty String
+
+| Value | Meaning | `= ''` | `IS NULL` | Counted by `COUNT(col)`? | Skipped by `AVG`? |
+|---|---|---|---|---|---|
+| `NULL` | Unknown / not applicable | UNKNOWN (never matches) | **true** | No | **Yes** |
+| `0` | A real number | false | false | Yes | No (counts as 0) |
+| `''` | A real string with no characters | **true** | false | Yes | n/a |
+
+```sql
+-- Three people: one phone is NULL (never asked), one is '' (asked, has none), one is '98765'
+SELECT COUNT(*), COUNT(phone) FROM people;   -- 3 | 2      (the NULL isn't counted)
+SELECT AVG(bonus) FROM people;               -- bonuses 100, 0, NULL -> 50, not 33.3 (NULL skipped, 0 counted)
+```
+
+> **Oracle** treats `''` as `NULL`. Postgres and MySQL do not. This is a classic gotcha when moving between databases.
+
+---
 
 ## 💻 The Sample Database (Used in Every SQL Chapter)
 
@@ -216,6 +269,24 @@ The database **evaluates** it in this order:
 
 That's why `WHERE total > 100` fails when `total` is a `SELECT` alias, while `ORDER BY total` works. It's also why you can't put `COUNT(*)` in `WHERE`.
 
+### `GROUP BY` vs `ORDER BY`
+
+| | `GROUP BY` | `ORDER BY` |
+|---|---|---|
+| Job | **Collapses** rows into groups so you can aggregate | **Sorts** the final rows |
+| Changes the row count? | Yes (one row per group) | No |
+| Runs | Step 3 | Step 7 (almost last) |
+| Needs an aggregate? | Normally, yes | No |
+
+```sql
+SELECT dept_id, COUNT(*) AS headcount     -- one row per department
+FROM employees
+GROUP BY dept_id
+ORDER BY headcount DESC;                  -- then sort those rows
+```
+
+`GROUP BY` does not guarantee any order. If you want sorted output, always write `ORDER BY`.
+
 ## 💻 Joins
 
 ```
@@ -281,6 +352,36 @@ FROM customers c
 LEFT JOIN orders o ON o.customer_id = c.id
 WHERE o.status = 'PAID';
 ```
+
+### Joining three or more tables
+
+Chain the joins. Each `JOIN` works on the result of the ones before it. Pick `LEFT JOIN` for the tables that may have no match, so the earlier rows aren't dropped.
+
+```sql
+-- Every employee with their department and their manager's name
+SELECT e.name AS employee, d.name AS department, m.name AS manager
+FROM employees e
+LEFT JOIN departments d ON d.id = e.dept_id          -- Neha has no department: keep her
+LEFT JOIN employees   m ON m.id = e.manager_id;      -- Asha has no manager: keep her
+```
+
+With *N* tables you need at least *N − 1* join conditions. Alias every table and prefix every column (`e.name`), because two tables often share column names like `id` and `name`.
+
+### What if you join without a matching condition?
+
+You get a **Cartesian product**: every row of one table paired with every row of the other (`9 × 4 = 36` rows here). It is what `CROSS JOIN` does on purpose. Doing it by accident (a forgotten `ON`, or the old comma syntax with no `WHERE`) is a classic way to blow up a query on large tables.
+
+```sql
+SELECT COUNT(*) FROM employees e CROSS JOIN departments d;      -- 36
+SELECT COUNT(*) FROM employees e, departments d;                -- 36 (old style, same thing)
+SELECT COUNT(*) FROM employees e JOIN departments d ON TRUE;    -- 36
+```
+
+Legitimate uses: generating a calendar × product grid, or every size × colour combination.
+
+### `JOIN` vs `UNION`
+
+`JOIN` combines **columns** from related tables side by side (horizontal). `UNION` stacks the **rows** of two queries on top of each other (vertical), and both queries need the same number of columns with compatible types.
 
 ### Joins can multiply rows
 

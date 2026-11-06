@@ -1,4 +1,4 @@
-# Chapter 03 — 8-Week Study Plan
+# Chapter 3 — 8-Week Study Plan
 
 ## 📖 Definition
 

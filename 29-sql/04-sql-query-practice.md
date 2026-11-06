@@ -14,6 +14,21 @@ INSERT INTO logins VALUES
   (3,'2026-03-10'),(3,'2026-03-11'),(3,'2026-03-12'),(3,'2026-03-13');
 ```
 
+## 🧒 The Ideas Behind Most Problems
+
+Almost every interview query is one of a few patterns. Spot the pattern first, then write the code.
+
+| If the question says… | The idea is… |
+|---|---|
+| "Nth highest", "top N" | Sort the values and pick a position, or give them a rank and keep the rank you want |
+| "per department / per customer" | Group the rows into piles and answer once per pile |
+| "more than the average" | Work out the average first (a subquery), then compare each row to it |
+| "duplicates" | Group by the column that should be unique and keep piles bigger than one |
+| "never ordered", "missing" | Match with a left join and keep the rows that found no partner |
+| "compared with the previous row", "growth" | Look at the neighbouring row with `LAG` or `LEAD` |
+| "running total" | A sum that adds each row to everything before it |
+| "consecutive days" | Number the rows; dates in an unbroken run all shift by the same amount |
+
 ---
 
 ## 🟢 Easy
@@ -388,6 +403,123 @@ SELECT
 ```
 
 **Result:** `8 | 9 | 9 | 10 | 36`
+
+---
+
+## 🟣 More Interview Favourites
+
+### 24. Employees without a manager
+
+```sql
+SELECT name FROM employees WHERE manager_id IS NULL;     -- never "= NULL"
+```
+
+**Result:** `Asha` (the top of the org chart).
+
+### 25. Employee count per department (including empty ones)
+
+```sql
+SELECT d.name, COUNT(e.id) AS headcount        -- COUNT(e.id), not COUNT(*): empty departments give 0
+FROM departments d
+LEFT JOIN employees e ON e.dept_id = d.id
+GROUP BY d.name
+ORDER BY headcount DESC, d.name;
+```
+
+| name | headcount |
+|---|---|
+| Engineering | 4 |
+| Sales | 3 |
+| HR | 1 |
+| Legal | 0 |
+
+`COUNT(*)` would show 1 for Legal (the NULL-extended row still counts as a row).
+
+### 26. Salary difference between consecutive employees
+
+```sql
+SELECT name, salary,
+       salary - LAG(salary) OVER (ORDER BY salary) AS diff_from_previous
+FROM employees
+ORDER BY salary;
+```
+
+| name | salary | diff_from_previous |
+|---|---|---|
+| Neha | 60000 | NULL |
+| Sara | 70000 | 10000 |
+| Vikram | 80000 | 10000 |
+| Karan | 90000 | 10000 |
+| Priya | 120000 | 30000 |
+| John | 130000 | 10000 |
+| Ravi | 150000 | 20000 |
+| Meera | 150000 | 0 |
+| Asha | 200000 | 50000 |
+
+For "difference from the company average" use `salary - AVG(salary) OVER ()`.
+
+### 27. Monthly sales totals
+
+```sql
+SELECT date_trunc('month', created_at)::date AS month,   -- MySQL: DATE_FORMAT(created_at, '%Y-%m-01')
+       SUM(amount) AS revenue,
+       COUNT(*)    AS orders
+FROM orders
+WHERE status = 'PAID'
+GROUP BY 1
+ORDER BY 1;
+```
+
+| month | revenue | orders |
+|---|---|---|
+| 2026-01-01 | 2700 | 3 |
+| 2026-02-01 | 3300 | 2 |
+| 2026-03-01 | 2100 | 2 |
+
+Group by the **truncated** date, not by the raw timestamp, otherwise each day becomes its own group.
+
+### 28. Customers with repeated orders
+
+```sql
+SELECT c.name, COUNT(*) AS paid_orders
+FROM customers c
+JOIN orders o ON o.customer_id = c.id
+WHERE o.status = 'PAID'
+GROUP BY c.id, c.name
+HAVING COUNT(*) > 1
+ORDER BY paid_orders DESC;
+```
+
+**Result:** `Anil | 4`, `Bina | 2`. (Chetan has one paid order, so he is filtered out by `HAVING`.)
+
+### 29. Employees hired in the last 30 days
+
+```sql
+SELECT name, hired_on
+FROM employees
+WHERE hired_on >= CURRENT_DATE - INTERVAL '30 days';     -- MySQL: CURDATE() - INTERVAL 30 DAY
+```
+
+Keep the column bare on the left-hand side so an index on `hired_on` can be used. Writing `WHERE CURRENT_DATE - hired_on <= 30` can't use the index.
+
+### 30. Names starting with a letter, and salary in a range
+
+```sql
+SELECT name FROM employees WHERE name ILIKE 'a%';                       -- 'A%' is case-sensitive in Postgres; ILIKE is not
+SELECT name, salary FROM employees WHERE salary BETWEEN 80000 AND 130000;   -- inclusive
+```
+
+**Results:** `Asha`; and `Vikram, Karan, Priya, John`.
+
+### 31. Pairs of employees with the same salary
+
+```sql
+SELECT a.name, b.name, a.salary
+FROM employees a
+JOIN employees b ON a.salary = b.salary AND a.id < b.id;   -- a.id < b.id: each pair once, no self-pairs
+```
+
+**Result:** `Ravi | Meera | 150000`.
 
 ---
 

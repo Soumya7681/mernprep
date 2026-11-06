@@ -1,4 +1,4 @@
-# Chapter 06 — Scope (Global, Function, Block)
+# Chapter 6 — Scope (Global, Function, Block)
 
 ## 📖 Definition
 

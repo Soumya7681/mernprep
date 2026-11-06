@@ -318,4 +318,4 @@ An ORM (SQLAlchemy, Prisma, TypeORM) gives productivity, type safety, migrations
 
 ---
 
-[← SQL Query Practice Problems](04-sql-query-practice.md) | [Index](../README.md) | [Next: FastAPI Fundamentals →](../30-fastapi/01-fastapi-fundamentals.md)
+[← SQL Query Practice Problems](04-sql-query-practice.md) | [Index](../README.md) | [Next: SQL Question Bank (3–4 Years) →](06-sql-question-bank-3-4-years.md)

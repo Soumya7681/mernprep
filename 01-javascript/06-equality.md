@@ -1,4 +1,4 @@
-# Chapter 09 — `==` vs `===` (Equality)
+# Chapter 9 — `==` vs `===` (Equality)
 
 ## 📖 Definition
 

@@ -11,6 +11,20 @@ These four tools turn SQL from "fetch rows" into an analytics language:
 
 All results below use the sample data from the previous chapter, and were checked by running the queries.
 
+## 🧒 In Simple Words
+
+- **Aggregate function:** takes many rows and boils them down to one answer (how many, the total, the average, the smallest, the biggest).
+- **GROUP BY:** puts rows into piles that share a value (one pile per department) so you can get one answer per pile.
+- **HAVING:** throws away whole piles that don't meet a condition. `WHERE` filters single rows *before* piling; `HAVING` filters piles *after*.
+- **Subquery:** a question inside a question. The inner one is answered first and its answer is used by the outer one.
+  - **Correlated subquery:** the inner question depends on the current outer row, so it is asked again for every row.
+- **CTE (`WITH`):** giving a step of your query a name, so the query reads like a recipe from top to bottom. It lasts for that one query only.
+- **Recursive CTE:** a CTE that keeps asking about its own previous result, which is how you walk up or down a tree (boss → team → their team).
+- **Window function:** a calculation that looks at *neighbouring* rows but **keeps every row**. For example, show each employee next to the average of their department.
+  - **`PARTITION BY`:** restart the calculation for each group.
+  - **`ROW_NUMBER` / `RANK` / `DENSE_RANK`:** numbering rows. They only differ on ties: unique numbers / ties share a number and then skip / ties share a number with no skipping.
+  - **`LAG` / `LEAD`:** peek at the previous / next row.
+
 ## 💻 Aggregation with GROUP BY and HAVING
 
 ```sql
@@ -145,6 +159,41 @@ SELECT city, name, total FROM ranked WHERE rn = 1 ORDER BY city;
 ```
 
 CTEs make long queries **readable** (each step has a name) and let you **reuse** a step more than once. In Postgres 12+, simple CTEs are inlined, so they're as fast as subqueries. Write `AS MATERIALIZED` to force the result to be computed once.
+
+### Multiple CTEs, and CTE vs derived table vs subquery
+
+The example above already uses **two CTEs in one `WITH`**: separate them with commas, write `WITH` once, and a later CTE can read an earlier one.
+
+| | Subquery | Derived table | CTE |
+|---|---|---|---|
+| Where it sits | Anywhere an expression fits (`WHERE`, `SELECT`) | In `FROM (…) AS t` | Before the main query: `WITH t AS (…)` |
+| Reusable in the same query? | No | No (copy it) | **Yes** (name it, use it many times) |
+| Can be recursive? | No | No | **Yes** |
+| Readability | OK for one step | Gets nested fast | Reads top to bottom |
+
+A **nested query** is just a subquery inside another query (subqueries can be nested several levels deep). A **derived table** is a subquery in `FROM` and it **must have an alias**. Performance is usually the same, because the planner treats them alike. Pick on readability.
+
+### Finding duplicates
+
+Group by the columns that define "the same", then keep the groups with more than one row.
+
+```sql
+-- Which salaries appear more than once, and how often?
+SELECT salary, COUNT(*) AS times
+FROM employees
+GROUP BY salary
+HAVING COUNT(*) > 1;
+-- 150000 | 2
+
+-- Which employees share a salary with someone else (the rows themselves)?
+SELECT name, salary
+FROM (SELECT name, salary, COUNT(*) OVER (PARTITION BY salary) AS same_salary FROM employees) t
+WHERE same_salary > 1;
+-- Ravi | 150000
+-- Meera | 150000
+```
+
+The first query tells you *which* values are duplicated; the second returns the *rows*. Deleting duplicates while keeping one is in [SQL Query Practice](04-sql-query-practice.md).
 
 ### Recursive CTE: hierarchies
 

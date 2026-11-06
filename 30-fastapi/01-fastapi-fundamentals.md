@@ -1,4 +1,4 @@
-# Chapter 105 — FastAPI Fundamentals
+# Chapter 106 — FastAPI Fundamentals
 
 ## 📖 Definition
 
@@ -342,4 +342,4 @@ app.include_router(posts.router, prefix="/api/v1")   # → /api/v1/posts
 
 ---
 
-[← SQL Interview Questions](../29-sql/05-sql-interview-questions.md) | [Index](../README.md) | [Next: Dependency Injection, Auth & Middleware →](02-dependency-injection-auth-middleware.md)
+[← SQL Question Bank (3–4 Years)](../29-sql/06-sql-question-bank-3-4-years.md) | [Index](../README.md) | [Next: Dependency Injection, Auth & Middleware →](02-dependency-injection-auth-middleware.md)

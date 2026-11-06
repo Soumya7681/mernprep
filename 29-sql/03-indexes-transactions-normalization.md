@@ -11,6 +11,24 @@ These topics decide whether a SQL database is **fast**, **correct under concurre
 
 ---
 
+## 🧒 In Simple Words
+
+- **Index:** like the index at the back of a book. Instead of reading every page to find a word, you look it up and jump to the page. Reads become faster; writes become a little slower because the index must be updated too.
+- **Full table scan:** reading the whole book page by page because there is no index to use.
+- **Composite index:** an index on two columns together, like sorting a phone book by surname *then* first name. It helps when you search by the first part (surname), not by the second part alone.
+- **Covering index:** an index that already holds everything the query needs, so the table is never opened.
+- **`EXPLAIN`:** asks the database to show its plan for a query, so you can see whether it uses an index.
+- **Transaction:** a group of steps treated as one. All succeed or all are undone, like a bank transfer.
+  - **Commit:** save the work. **Rollback:** undo it. **Savepoint:** a bookmark you can undo back to.
+- **ACID:** the four promises of a transaction: all-or-nothing, data stays valid, transactions don't disturb each other, and saved data survives a crash.
+- **Isolation level:** how much one transaction is allowed to see of another's work. Stricter is safer but slower.
+- **Deadlock:** two people each holding something the other needs, each waiting forever. The database cancels one of them.
+- **Normalisation:** keeping each fact in exactly one place, by splitting data into related tables, so it can't contradict itself.
+- **View:** a saved query you can treat like a table. **Materialised view:** a saved query whose *result* is stored too, so it is fast but can be out of date.
+- **Stored procedure / function / trigger:** code saved inside the database. A function gives back a value, a procedure performs a job, and a trigger runs by itself when data changes.
+- **Partitioning vs sharding:** splitting a big table into pieces on one server vs spreading the pieces over many servers.
+- **Connection pool:** a set of database connections kept open and shared, because opening a new one each time is slow.
+
 ## 1️⃣ Indexes
 
 ### How a B-tree index works
@@ -94,6 +112,18 @@ Execution Time: 0.07 ms
 | `Sort` / `HashAggregate` | In-memory or on-disk sort or grouping (check `work_mem`) |
 
 Compare **estimated rows vs actual rows**. A big mismatch means the planner had bad statistics.
+
+### Full table scan vs index scan vs index seek
+
+| Term | What happens | Cost |
+|---|---|---|
+| **Full table scan** (`Seq Scan`) | Reads **every row** and checks the filter | O(n); fine for small tables, or when you want most rows anyway |
+| **Index seek** | Walks the B-tree from the root straight to the matching key(s) | O(log n); the fast path for a selective filter |
+| **Index scan** | Reads a **range or the whole index** in order, not a single point | Between the two; still cheaper than the table if the index is narrower |
+
+"Index seek" and "index scan" are **SQL Server** names. Postgres calls both `Index Scan` (or `Index Only Scan`) and shows the difference in `Index Cond`. A seek needs a **sargable** condition (`WHERE customer_id = 42`). Wrapping the column in a function, `WHERE LOWER(email) = 'x'`, turns a seek into a scan unless you add an expression index.
+
+**Selectivity** = distinct values ÷ rows. A column with a high selectivity (`email`, `id`) is a great index candidate. A column with two values (`is_active`) is not; the planner will often prefer a full scan for it. A **partial index** (`WHERE is_active`) can still help when one value is rare.
 
 ---
 
@@ -268,6 +298,71 @@ FOR EACH ROW EXECUTE FUNCTION touch_updated_at();
 | Materialised view | Expensive reports refreshed every few minutes |
 | Stored procedure / function | Logic close to the data (bulk jobs); harder to version and test |
 | Trigger | Audit logs, `updated_at`, enforcing rules; hidden side effects, so use sparingly |
+
+### Stored procedure vs function
+
+```sql
+-- Function: returns a value, can be used inside a query
+CREATE FUNCTION order_total(p_customer INT) RETURNS BIGINT AS $$
+  SELECT COALESCE(SUM(amount), 0) FROM orders
+  WHERE customer_id = p_customer AND status = 'PAID';
+$$ LANGUAGE sql STABLE;
+
+SELECT name, order_total(id) FROM customers;            -- used like a column
+
+-- Procedure (Postgres 11+): called with CALL, can COMMIT / ROLLBACK inside
+CREATE PROCEDURE archive_old_orders(p_before DATE) LANGUAGE plpgsql AS $$
+BEGIN
+  INSERT INTO orders_archive SELECT * FROM orders WHERE created_at < p_before;
+  DELETE FROM orders WHERE created_at < p_before;
+  COMMIT;                                               -- functions cannot control transactions
+END $$;
+
+CALL archive_old_orders('2025-01-01');
+```
+
+| | Function | Stored procedure |
+|---|---|---|
+| Called with | `SELECT fn()` (inside any query) | `CALL proc()` (a standalone statement) |
+| Must return a value? | Yes (a scalar, a row, or a table) | No (optional `OUT` parameters) |
+| Use in `SELECT` / `WHERE` | Yes | No |
+| Transaction control (`COMMIT`) | No | **Yes** |
+| Typical use | Calculations, reusable expressions, triggers | Batch jobs, multi-step workflows |
+
+*(In SQL Server and MySQL the same split holds: functions must return a value and are used in queries; procedures are called with `EXEC` / `CALL`.)*
+
+### Temporary tables vs CTEs
+
+```sql
+CREATE TEMP TABLE big_spenders AS
+  SELECT customer_id, SUM(amount) AS total FROM orders GROUP BY customer_id HAVING SUM(amount) > 1000;
+
+CREATE INDEX ON big_spenders (customer_id);              -- you can index it
+SELECT * FROM big_spenders;                              -- reuse it in later statements
+-- dropped automatically when the session ends (or ON COMMIT DROP)
+```
+
+| | Temporary table | CTE |
+|---|---|---|
+| Lifetime | The session (or transaction) | **One statement** |
+| Stored | Yes: real (session-private) table | No: just a named step in the query |
+| Indexable / has statistics | **Yes** | No |
+| Reusable across statements | **Yes** | No |
+| Best for | Big intermediate results used many times, multi-step ETL | Readability, recursion, one-off steps |
+
+### Partitioning in practice
+
+```sql
+CREATE TABLE events (id BIGINT, created_at TIMESTAMPTZ NOT NULL, payload JSONB)
+PARTITION BY RANGE (created_at);
+
+CREATE TABLE events_2026_01 PARTITION OF events
+  FOR VALUES FROM ('2026-01-01') TO ('2026-02-01');
+
+DROP TABLE events_2026_01;     -- removing a month of data is instant, no slow DELETE
+```
+
+Queries that filter on `created_at` only touch the matching partitions (**partition pruning**). Partitioning stays on **one server**; sharding is what spreads data across servers.
 
 ---
 

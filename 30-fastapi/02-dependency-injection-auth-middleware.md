@@ -1,4 +1,4 @@
-# Chapter 106 — Dependency Injection, Auth & Middleware
+# Chapter 107 — Dependency Injection, Auth & Middleware
 
 ## 📖 Definition
 

@@ -1,4 +1,4 @@
-# Chapter 07 — The `this` Keyword
+# Chapter 7 — The `this` Keyword
 
 ## 📖 Definition
 

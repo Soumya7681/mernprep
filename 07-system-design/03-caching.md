@@ -1,4 +1,4 @@
-# Chapter 159 — Caching
+# Chapter 160 — Caching
 
 ## 📖 Definition
 

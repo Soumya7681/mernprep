@@ -1,4 +1,4 @@
-# Chapter 01 — MERN Role Requirements & Skill Matrix
+# Chapter 1 — MERN Role Requirements & Skill Matrix
 
 ## 📖 Definition
 

@@ -1,4 +1,4 @@
-# Chapter 141 — SQL Scenarios
+# Chapter 142 — SQL Scenarios
 
 ## 📖 Definition
 

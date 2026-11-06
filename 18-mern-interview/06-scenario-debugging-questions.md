@@ -1,4 +1,4 @@
-# Chapter 150 — MERN Interview: Scenario & Debugging Questions
+# Chapter 151 — MERN Interview: Scenario & Debugging Questions
 
 ## 📖 Why Scenario Questions Matter
 

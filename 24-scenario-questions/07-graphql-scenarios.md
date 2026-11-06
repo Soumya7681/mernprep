@@ -1,4 +1,4 @@
-# Chapter 140 — GraphQL Scenarios
+# Chapter 141 — GraphQL Scenarios
 
 ## 📖 Definition
 

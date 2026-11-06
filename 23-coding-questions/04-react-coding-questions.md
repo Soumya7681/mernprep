@@ -1,4 +1,4 @@
-# Chapter 129 — React Coding Questions
+# Chapter 130 — React Coding Questions
 
 ## 📖 Definition
 

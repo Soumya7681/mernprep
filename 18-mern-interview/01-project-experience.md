@@ -1,4 +1,4 @@
-# Chapter 145 — MERN Interview: Self-Introduction & Project Questions
+# Chapter 146 — MERN Interview: Self-Introduction & Project Questions
 
 ## 📖 Why This Chapter Comes First
 

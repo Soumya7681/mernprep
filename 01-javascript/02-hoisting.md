@@ -1,4 +1,4 @@
-# Chapter 05 — Hoisting
+# Chapter 5 — Hoisting
 
 ## 📖 Definition
 

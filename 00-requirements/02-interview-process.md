@@ -1,4 +1,4 @@
-# Chapter 02 — How MERN Interviews Run
+# Chapter 2 — How MERN Interviews Run
 
 ## 📖 Definition
 
